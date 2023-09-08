@@ -42,7 +42,29 @@ Identify potential patterns, perform some statistical analysis.
 
 
 ## Results
-(fill in what you found about the comparative quality of API coverage in your chosen area and the results of your model.)
+
+### API Outputs
+The coverage of each API was of good quality. A good number and variety of categories were returned by each platform, and there were minimal null values.
+
+However, the coverage between Foursquare and Yelp had little overlap. When the results from each API were merged, only 157 business results out of a potential 2280 rows were common to both.
+
+There were also discrepancies between the APIs when comparing the calculated distance between the bike station and a given business.
+
+Additionally, each API has a different classification system for categorizing businesses, which means that more data cleaning and standardization would be required to have more accurate results.
+
+### Data Quality
+The data had an incredibly scattered distribution, and no parameters passed the Shapiro-Wilks test for normality.
+It was therefore not very surprising to see that there existed very few candidates for correlation tests or regression models.
+P-values were all very high, and R-squared values were all very low. No model had strong evidence to suggest that a relationship existed between any variables.
+The strongest correlation was between distance from a bike station and number of reviews (p-value < 0.05). 
+Regression analysis demonstrated that despite the correlation and low p-value, distance was not a good predictor for number of reviews (R-squared: 0.026).
+Multivariate regression was not capable of producing a strong model either. When investigating the relationship between the number of free bikes at a bike station and the counts of each business category nearby, it was possible to narrow down the model to only include the most likely categories to be near a bike station, and those categories had low p-values (i.e. were statistically significant). However, even in this case, the R-squared value was low, and so further work would have to be done before using this model as an accurate predictor.
+
+### Overall conclusions
+
+
+
+
 
 ## Challenges 
 (discuss challenges you faced in the project)
