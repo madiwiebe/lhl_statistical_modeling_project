@@ -62,12 +62,24 @@ Multivariate regression was not capable of producing a strong model either. When
 
 ### Overall conclusions
 
-
+There is likely some relationship between number of bikes and business metrics, but more data should probably be collected and more types of models should be explored. Altering the data collection parameters to be less granular (or developing processes to organize by category then subcategory) would likely be helpful in this type of project.
 
 
 
 ## Challenges 
-(discuss challenges you faced in the project)
+
+Many of the challenges involved breaking complex tasks into smaller processes. Knowing how and when to use the functionalities offered by lists vs dictionaries vs series vs dataframes (or nested combinations of any of the above), and how to access values within those structures (especially iterating and filtering through values) could feel pretty unforgiving if they weren't done in a proper order.
+
+Other challenges introduced by this project relate to the data content and data collection method. Foursquare and Yelp have limited results for points of interest that are not related to food and beverage venues, which limits the possibilities of exploring relationships between bike station data and variables such as public transit, tourism centers, parks, and other locations. The data collected were not normally distributed at all, which means that the collection method may need adjusting or the sample size may need to be increased.
+
+Related to the data collection method, having limited API calls available (enforced by limited credits or a daily limit) meant that collecting all information for all locations was less feasible. 
 
 ## Future Goals
-(what would you do if you had more time?)
+
+With more time, I would like to spend more time refining my data collection method (ensuring that all results for all locations were being accessed, especially for the Yelp API where the number of businesses returned in a query has a limit). I would want to sort my categories into categories and subcategories. I would want to investigate whether it's possible to integrate data from a city transit API, or even investigate the locations of bike lanes and bike paths within a city. 
+
+I would also like to spend more time developing the categorical model that includes the number of free bikes, the number of nearby businesses and their categories, and those businesses' ratings. 
+
+I'm also interested to know whether bike station usage (represented by number of empty slots) and location density might be associated with locations near certain points of interest. For example, are bike stations located near coffee shops used more than bike stations near bars? Is there a higher density of bike station locations in areas that have a low density of bus stops?
+
+Finally, if I had more time I would spend more time visualizing the data with different methods, particularly the outputs of the modeling stage. Optimizing how to best display the distributions and relationships between parameters would be very satisfying to accomplish. 
